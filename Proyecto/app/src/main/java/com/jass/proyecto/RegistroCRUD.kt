@@ -68,6 +68,39 @@ class RegistroCRUD(context: Context) {
         db.close()
 
         return item
+    }
 
+    fun getRegistro(Id:String): Registro{
+
+        var item:Registro?= null
+
+        val db:SQLiteDatabase = helper?.readableDatabase!!
+        val columnas = arrayOf(
+                RegistroContract.Companion.Entrada.Columna_Id,
+                RegistroContract.Companion.Entrada.Columna_Precio,
+                RegistroContract.Companion.Entrada.Columna_Total,
+                RegistroContract.Companion.Entrada.Columna_Cantidad,
+                RegistroContract.Companion.Entrada.Columna_NombreProducto)
+
+        val c:Cursor = db.query(
+                RegistroContract.Companion.Entrada.Nombre_Tabla,
+                columnas,
+                " Id = ?",
+                arrayOf(Id),
+                null,
+                null,
+                null
+        )
+
+        while (c.moveToNext()){
+            item = Registro(c.getString(c.getColumnIndexOrThrow( RegistroContract.Companion.Entrada.Columna_Id)),
+                            c.getString(c.getColumnIndexOrThrow( RegistroContract.Companion.Entrada.Columna_Precio)),
+                            c.getString(c.getColumnIndexOrThrow( RegistroContract.Companion.Entrada.Columna_Total)),
+                            c.getString(c.getColumnIndexOrThrow( RegistroContract.Companion.Entrada.Columna_Cantidad)),
+                            c.getString(c.getColumnIndexOrThrow( RegistroContract.Companion.Entrada.Columna_NombreProducto)))
+        }
+        c.close()
+
+        return item!!;
     }
 }
