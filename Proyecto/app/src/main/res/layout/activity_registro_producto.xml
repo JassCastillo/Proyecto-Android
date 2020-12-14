@@ -7,6 +7,25 @@
     android:background="#333c87"
     tools:context=".RegistroProducto">
 
+    <EditText
+        android:id="@+id/editId"
+        android:layout_width="327dp"
+        android:layout_height="42dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#00DF45C5"
+        android:ems="10"
+        android:hint="Id del producto"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
     <Button
         android:id="@+id/btmodificar"
         android:layout_width="299dp"
