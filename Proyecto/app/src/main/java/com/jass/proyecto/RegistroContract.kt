@@ -11,11 +11,10 @@ class RegistroContract {
             companion object{
                 val Nombre_Tabla = "Usuarios"
                 val Columna_Id = "Id"
-                val Columna_Nombres = "Nombres"
-                val Columna_Apellidos = "Apellidos"
-                val Columna_Telefono = "Telefono"
-                val Columna_Direccion = "Direccion"
-                val Columna_Cedula = "Cedula"
+                val Columna_Precio = "Precio"
+                val Columna_Total = "Total"
+                val Columna_Cantidad = "Cantidad"
+                val Columna_NombreProducto = "NombreProducto"
             }
         }
     }

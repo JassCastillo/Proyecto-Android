@@ -10,11 +10,10 @@ class DataBaseHelper(context: Context): SQLiteOpenHelper(context,RegistroContrac
     companion object{
         val CREATE_USUARIOS_TABLA = "CREATE TABLE" + RegistroContract.Companion.Entrada.Nombre_Tabla +
                 " (" + RegistroContract.Companion.Entrada.Columna_Id + "TEXT PRIMARY KEY," +
-                RegistroContract.Companion.Entrada.Columna_Nombres + "TEXT" +
-                RegistroContract.Companion.Entrada.Columna_Apellidos + "TEXT" +
-                RegistroContract.Companion.Entrada.Columna_Telefono + "TEXT" +
-                RegistroContract.Companion.Entrada.Columna_Direccion + "TEXT" +
-                RegistroContract.Companion.Entrada.Columna_Cedula + "TEXT)"
+                RegistroContract.Companion.Entrada.Columna_Precio + "TEXT" +
+                RegistroContract.Companion.Entrada.Columna_Total + "TEXT" +
+                RegistroContract.Companion.Entrada.Columna_Cantidad + "TEXT" +
+                RegistroContract.Companion.Entrada.Columna_NombreProducto + "TEXT)"
         val REMOVE_USUARIOS_TABLA = "DROP TABLE IF EXIST " + RegistroContract.Companion.Entrada.Nombre_Tabla
     }
 
