@@ -44,7 +44,7 @@ class login  : AppCompatActivity() {
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 
             //Mostramos el progressdialog
-            mProgressBar.setMessage("Registering User...")
+            mProgressBar.setMessage("Iniciando Sesión...")
             mProgressBar.show()
 
             //Iniciamos sesión con el método signIn y enviamos usuario y contraseña
@@ -57,7 +57,7 @@ class login  : AppCompatActivity() {
                         goHome() // Creamos nuestro método en la parte de abajo
                     } else {
                         // sino le avisamos el usuairo que orcurrio un problema
-                        Toast.makeText(this, "Authentication failed.",
+                        Toast.makeText(this, "Error de inicio de sesion.",
                             Toast.LENGTH_SHORT).show()
                     }
                 }

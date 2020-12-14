@@ -8,6 +8,21 @@
     android:backgroundTint="#333c87"
     tools:context=".Principal">
 
+    <Button
+        android:id="@+id/btregistrarProducto"
+        android:layout_width="299dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#00DF45C5"
+        android:onClick="Principal"
+        android:text="Registrar Producto"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="389dp"
