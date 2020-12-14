@@ -2,6 +2,7 @@ package com.jass.proyecto
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 
 class RegistroCRUD(context: Context) {
@@ -27,5 +28,46 @@ class RegistroCRUD(context: Context) {
         val newRowId = db.insert(RegistroContract.Companion.Entrada.Nombre_Tabla, null, values)
         // Cerrar la BD
         db.close()
+    }
+
+    fun getRegistro(): ArrayList<Registro>{
+        val item:ArrayList<Registro> = ArrayList()
+
+        //abrir DB en modo escritura
+        val db: SQLiteDatabase = helper?.readableDatabase!!
+
+        //Especificar columnas que quiero consultar
+        val columnas = arrayOf(RegistroContract.Companion.Entrada.Columna_Id,RegistroContract.Companion.Entrada.Columna_Precio,RegistroContract.Companion.Entrada.Columna_Total,RegistroContract.Companion.Entrada.Columna_Cantidad,RegistroContract.Companion.Entrada.Columna_NombreProducto)
+
+        //crear un cursor para recorre la tabla
+        val c: Cursor= db.query(
+            RegistroContract.Companion.Entrada.Nombre_Tabla,
+            columnas,
+            null,
+            null,
+            null,
+            null,
+            null
+            )
+
+        //hacer el recorrido del cursor en la tabla
+        while (c.moveToNext()){
+            item.add(
+                Registro(
+                c.getString(c.getColumnIndexOrThrow(RegistroContract.Companion.Entrada.Columna_Id)),
+                    c.getString(c.getColumnIndexOrThrow(RegistroContract.Companion.Entrada.Columna_Precio)),
+                    c.getString(c.getColumnIndexOrThrow(RegistroContract.Companion.Entrada.Columna_Total)),
+                    c.getString(c.getColumnIndexOrThrow(RegistroContract.Companion.Entrada.Columna_Cantidad)),
+                    c.getString(c.getColumnIndexOrThrow(RegistroContract.Companion.Entrada.Columna_NombreProducto))
+            )
+            )
+        }
+
+        //Cerrar DB
+
+        db.close()
+
+        return item
+
     }
 }
