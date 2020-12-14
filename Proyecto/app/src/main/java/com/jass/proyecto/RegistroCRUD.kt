@@ -123,4 +123,14 @@ class RegistroCRUD(context: Context) {
 
         db.close()
     }
+
+    fun deleteRegistro(item: Registro){
+        val db:SQLiteDatabase = helper?.writableDatabase!!
+
+        db.delete(RegistroContract.Companion.Entrada.Nombre_Tabla,
+        "Id = ?",
+        arrayOf(item.Id))
+
+        db.close()
+    }
 }
