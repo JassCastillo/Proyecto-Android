@@ -8,152 +8,15 @@
     android:backgroundTint="#333c87"
     tools:context=".Principal">
 
-    <Button
-        android:id="@+id/btregistrar"
-        android:layout_width="299dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#00DF45C5"
-        android:text="Registrar"
-        android:textColor="@color/white"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729" />
-
-    <Button
-        android:id="@+id/btbuscar"
-        android:layout_width="299dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#00DF45C5"
-        android:text="Buscar Registro"
-        android:textColor="@color/white"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
-
-    <Button
-        android:id="@+id/btmodificar"
-        android:layout_width="299dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#00DF45C5"
-        android:text="Modificar"
-        android:textColor="@color/white"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.914" />
-
-    <EditText
-        android:id="@+id/editCedula"
-        android:layout_width="327dp"
-        android:layout_height="42dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00DF45C5"
-        android:ems="10"
-        android:hint="N° Cedula"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632" />
-
-    <EditText
-        android:id="@+id/editDireccion"
-        android:layout_width="327dp"
-        android:layout_height="42dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00DF45C5"
-        android:ems="10"
-        android:hint="Direccion"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.554" />
-
-    <EditText
-        android:id="@+id/editNombres"
-        android:layout_width="327dp"
-        android:layout_height="42dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00DF45C5"
-        android:ems="10"
-        android:hint="Nombres"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
-
-    <EditText
-        android:id="@+id/editTelefono"
-        android:layout_width="327dp"
-        android:layout_height="42dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00DF45C5"
-        android:ems="10"
-        android:hint="Telefono"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
-
-    <EditText
-        android:id="@+id/editApellido"
-        android:layout_width="327dp"
-        android:layout_height="42dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#00DF45C5"
-        android:ems="10"
-        android:hint="Apellidos"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
-
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="205dp"
-        android:layout_height="182dp"
-        android:layout_marginStart="116dp"
+        android:id="@+id/imageView2"
+        android:layout_width="389dp"
+        android:layout_height="250dp"
+        android:src="@drawable/_20705810_112207647318802_51162299562859092_o"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058"
-        app:srcCompat="@drawable/register_256" />
-
+        app:layout_constraintVertical_bias="0.143" />
 </androidx.constraintlayout.widget.ConstraintLayout>
