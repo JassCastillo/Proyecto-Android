@@ -103,4 +103,24 @@ class RegistroCRUD(context: Context) {
 
         return item!!;
     }
+
+    fun updateRegistro(item: Registro){
+
+        val db:SQLiteDatabase = helper?.writableDatabase!!
+
+        val values = ContentValues()
+        values.put(RegistroContract.Companion.Entrada.Columna_Id, item.Id)
+        values.put(RegistroContract.Companion.Entrada.Columna_Precio, item.Precio)
+        values.put(RegistroContract.Companion.Entrada.Columna_Total, item.Total)
+        values.put(RegistroContract.Companion.Entrada.Columna_Cantidad, item.Cantidad)
+        values.put(RegistroContract.Companion.Entrada.Columna_NombreProducto, item.NombreProducto)
+
+        db.update(
+                RegistroContract.Companion.Entrada.Nombre_Tabla,
+                values,
+                "Id = ?",
+                arrayOf(item.Id))
+
+        db.close()
+    }
 }
